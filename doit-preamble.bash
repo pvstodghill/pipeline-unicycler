@@ -80,3 +80,5 @@ FILTLONG=data/01_filtlong
 FASTP=data/02_fastp
 UNICYCLER=data/03_unicycler
 NORMALIZED=data/05_normalized
+PGAP_OUT=data/06_pgap
+PROKKA=data/06_prokka
