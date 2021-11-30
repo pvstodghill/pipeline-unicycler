@@ -76,3 +76,4 @@ set -o pipefail
 # ------------------------------------------------------------------------
 
 INPUTS=data/00_inputs
+FILTLONG=data/01_filtlong
