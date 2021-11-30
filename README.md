@@ -14,6 +14,9 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 
 # required
+conda install -y "samtools>=1.10"
+conda install -y emboss
+conda install -y entrez-direct
 conda install -y fastp=0.22.0 # <-- for me 0.23.x hangs
 conda install -y filtlong
 conda install -y prokka
