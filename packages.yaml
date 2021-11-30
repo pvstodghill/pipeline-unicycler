@@ -1,0 +1,50 @@
+# https://github.com/OpenGene/fastp
+---
+image: pvstodghill/fastp
+version: 0.22.0__2021-08-31
+commands:
+  - fastp
+  
+# https://github.com/rrwick/Filtlong
+---
+image: pvstodghill/filtlong
+version: 0.2.1__2021-09-01
+commands:
+  - filtlong
+  
+# https://github.com/tseemann/prokka/releases
+---
+image: pvstodghill/prokka
+version: 1.14.6__2020-04-14
+commands:
+  - prokka
+  - prokka-abricate_to_fasta_db
+  - prokka-biocyc_to_fasta_db
+  - prokka-build_kingdom_dbs
+  - prokka-cdd_to_hmm
+  - prokka-clusters_to_hmm
+  - prokka-genbank_to_fasta_db
+  - prokka-genpept_to_fasta_db
+  - prokka-hamap_to_hmm
+  - prokka-make_tarball
+  - prokka-tigrfams_to_hmm
+  - prokka-uniprot_to_fasta_db
+
+# https://github.com/oschwengers/referenceseeker
+---
+image: pvstodghill/referenceseeker
+version: 1.7.3__2021-06-07
+commands:
+  - referenceseeker
+  - referenceseeker_db
+
+# https://github.com/rrwick/Unicycler
+---
+image: pvstodghill/unicycler
+version: 0.4.9__2021-05-03
+commands:
+  - unicycler
+  - unicycler_align
+  - unicycler_polish
+  - unicycler_scrub
+# - unicycler_check # (deprecated)
