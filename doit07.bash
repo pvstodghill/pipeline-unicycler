@@ -12,6 +12,7 @@ if [ -z "$R1_FQ_GZ" ] ; then
 
 elif [ -z "$NANOPORE_FQ_GZ" ] ; then
 
+    echo 1>&2 '# Compute stats for short-reads'
 
     ./scripts/compute-assembly-stats \
 	-t ${THREADS} \
@@ -25,6 +26,8 @@ elif [ -z "$NANOPORE_FQ_GZ" ] ; then
 
 else
     
+    echo 1>&2 '# Compute stats for long- and short-reads'
+
     ./scripts/compute-assembly-stats \
 	-t ${THREADS} \
 	-q -s -S ${STRAIN} \
