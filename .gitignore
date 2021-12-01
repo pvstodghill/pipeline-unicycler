@@ -1,10 +1,12 @@
 .bash_history
 .cache
 .java
+/.keras/
+/.parallel
+/.wget-hsts
+/config.bash
+/tmp.*
+HEADER.md
 data/
 doit*.out
 doit[0-9][0-9][a-z].bash
-/.keras/
-/.wget-hsts
-/config.bash
-HEADER.md
