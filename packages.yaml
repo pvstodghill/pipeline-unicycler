@@ -1,3 +1,18 @@
+# https://github.com/BenLangmead/bowtie2
+---
+image: pvstodghill/bowtie2
+version: 2.4.4__2021-09-01
+commands:
+  - bowtie2
+  - bowtie2-align-l
+  - bowtie2-align-s
+  - bowtie2-build
+  - bowtie2-build-l
+  - bowtie2-build-s
+  - bowtie2-inspect
+  - bowtie2-inspect-l
+  - bowtie2-inspect-s
+
 # ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/versions/
 ---
 image: pvstodghill/edirect
@@ -364,6 +379,59 @@ version: 0.2.1__2021-09-01
 commands:
   - filtlong
   
+# http://mummer.sourceforge.net/
+---
+image: pvstodghill/mummer
+version: 3.23__2021-10-01
+commands:
+  - combineMUMs
+  - delta-filter
+  - dnadiff
+  - exact-tandems
+  - mapview
+  - mgaps
+  - mummer
+  - mummerplot
+  - nucmer
+  - promer
+  - repeat-match
+  - run-mummer1
+  - run-mummer3
+  - show-aligns
+  - show-coords
+  - show-diff
+  - show-snps
+  - show-tiling
+
+---
+image: pvstodghill/ncbi-blast
+version: 2.10.0plus__2020-01-15
+commands:
+  - blast_formatter
+  - blastdb_aliastool
+  - blastdbcheck
+  - blastdbcmd
+  - blastn
+  - blastp
+  - blastx
+  - cleanup-blastdb-volumes.py
+  - convert2blastmask
+  - deltablast
+  - dustmasker
+  - get_species_taxids.sh
+  - legacy_blast.pl
+  - makeblastdb
+  - makembindex
+  - makeprofiledb
+  - psiblast
+  - rpsblast
+  - rpstblastn
+  - segmasker
+  - tblastn
+  - tblastx
+  - update_blastdb.pl
+  - windowmasker
+
 # https://github.com/tseemann/prokka/releases
 ---
 image: pvstodghill/prokka
