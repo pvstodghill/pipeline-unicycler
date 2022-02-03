@@ -33,7 +33,7 @@ if [ "$PGAP_HOME" ] ; then
 
     ./scripts/run-pgap \
 	-u -f \
-	-S $STRAIN \
+	-S $STRAIN -V "${VERSION}" \
 	-t ${TAXON_ID} \
 	-o ${PGAP_OUT} \
 	-p ${PGAP_HOME} \
@@ -58,7 +58,7 @@ else
 	     --genus ${GENUS} \
 	     --species ${SPECIES} \
 	     --strain ${STRAIN} \
-	     --locustag ${STRAIN}_prokka \
+	     --locustag ${STRAIN}${VERSION}_prokka \
 	     --rfam --addgenes \
 	     ${NORMALIZED}/normalized.fasta
 

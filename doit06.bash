@@ -12,7 +12,7 @@ rm -rf ${NORMALIZED}
 mkdir -p ${NORMALIZED}
 
 cat ${POLISHED}/polished.fasta \
-    | ./scripts/rename-contigs -d ${STRAIN}_ \
+    | ./scripts/rename-contigs -d ${STRAIN}${VERSION}_ \
     | ./scripts/dephix \
 	  > ${NORMALIZED}/normalized.fasta
 
