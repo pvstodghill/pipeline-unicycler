@@ -18,7 +18,7 @@ fi
 
 if [ "$PGAP_HOME" ] ; then
 
-    . config06.bash
+    . config07.bash
 
     echo 1>&2 '# Running PGAP...'
 
