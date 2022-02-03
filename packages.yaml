@@ -439,6 +439,13 @@ commands:
   - update_blastdb.pl
   - windowmasker
 
+# https://github.com/Nextomics/NextPolish
+---
+image: pvstodghill/nextpolish
+version: 1.4.0__2021-11-17
+commands:
+  - nextPolish
+
 # https://github.com/tseemann/prokka/releases
 ---
 image: pvstodghill/prokka
