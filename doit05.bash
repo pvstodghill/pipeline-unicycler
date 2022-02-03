@@ -3,30 +3,15 @@
 . doit-preamble.bash
 
 # ------------------------------------------------------------------------
-# Step 5. "Normalize" the genome.
+# Step 4. Run ReferenceSeeker
 # ------------------------------------------------------------------------
 
-echo 1>&2 '# "Normalizing" the genome...'
-
-rm -rf ${NORMALIZED}
-mkdir -p ${NORMALIZED}
-
-cat ${UNICYCLER}/assembly.fasta \
-    | ./scripts/rename-contigs -d ${STRAIN}_ \
-    | ./scripts/dephix \
-	  > ${NORMALIZED}/normalized.fasta
-
-if [ "$PGAP_HOME" ] ; then
-
-    echo 1>&2 '# "Sanitizing" the genome for PGAP...'
-
-
-    cat ${NORMALIZED}/normalized.fasta \
-	| ./scripts/sanitize-for-pgap \
-	      > ${NORMALIZED}/sanitized.fasta
-
+if [ "$REFSEEK" ] ; then
+    echo '# Running ReferenceSeeker...'
+    REFSEEK="$REFSEEK" \
+	   ./scripts/run-referenceseeker ${UNICYCLER}/assembly.fasta
 fi
-
+    
 # ------------------------------------------------------------------------
 # Done.
 # ------------------------------------------------------------------------
