@@ -13,7 +13,7 @@ if [ -z "${SPECIES}" -o "${SPECIES}" = FIXME ] ; then
 fi
 
 # ------------------------------------------------------------------------
-# Step 6. Running PGAP or Prokka
+# Running PGAP or Prokka
 # ------------------------------------------------------------------------
 
 if [ "$PGAP_HOME" ] ; then

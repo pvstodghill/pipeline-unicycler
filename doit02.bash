@@ -3,7 +3,7 @@
 . doit-preamble.bash
 
 # ------------------------------------------------------------------------
-# Step 2. Run fastp - https://github.com/OpenGene/fastp
+# Run fastp - https://github.com/OpenGene/fastp
 # ------------------------------------------------------------------------
 
 rm -rf ${FASTP}

@@ -3,7 +3,7 @@
 . doit-preamble.bash
 
 # ------------------------------------------------------------------------
-# Step 5. "Normalize" the genome.
+# "Normalize" the genome.
 # ------------------------------------------------------------------------
 
 echo 1>&2 '# "Normalizing" the genome...'
