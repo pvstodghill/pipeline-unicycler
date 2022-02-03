@@ -13,6 +13,8 @@ ILLUMINA_DIR=../000NOTES/2020-09-10-more-illumina-brc-downloads/
 R1_FQ_GZ=$ILLUMINA_DIR/*Pag_FIXME_*_R1.fastq.gz
 R2_FQ_GZ=$ILLUMINA_DIR/*Pag_FIXME_*_R2.fastq.gz
 
+FASTP_ADAPTER_ARGS= # Use auto-detection method
+#FASTP_ADAPTER_ARGS=--adapter_fasta inputs/NEBnext_PE.fa
 #SKIP_FASTP=true # Illumina reads are already trimmed
 
 #MODE=conservative
