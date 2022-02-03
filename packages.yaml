@@ -385,6 +385,7 @@ commands:
   - filtlong
   
 # http://mummer.sourceforge.net/
+# https://bioconda.github.io/recipes/mummer/README.html
 ---
 image: pvstodghill/mummer
 version: 3.23__2021-10-01
@@ -457,6 +458,7 @@ commands:
   - prokka-uniprot_to_fasta_db
 
 # https://github.com/oschwengers/referenceseeker
+# https://bioconda.github.io/recipes/referenceseeker/README.html
 ---
 image: pvstodghill/referenceseeker
 version: 1.8.0__2022-01-31
@@ -501,7 +503,7 @@ commands:
   - zoom2sam.pl
 
 # https://github.com/rrwick/Unicycler
-# https://anaconda.org/bioconda/unicycler
+# https://bioconda.github.io/recipes/unicycler/README.html
 ---
 image: pvstodghill/unicycler
 version: 0.5.0__2022-01-31
