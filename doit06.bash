@@ -11,7 +11,7 @@ echo 1>&2 '# "Normalizing" the genome...'
 rm -rf ${NORMALIZED}
 mkdir -p ${NORMALIZED}
 
-cat ${UNICYCLER}/assembly.fasta \
+cat ${POLISHED}/polished.fasta \
     | ./scripts/rename-contigs -d ${STRAIN}_ \
     | ./scripts/dephix \
 	  > ${NORMALIZED}/normalized.fasta

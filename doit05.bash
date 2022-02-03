@@ -9,7 +9,7 @@
 if [ "$REFSEEK" ] ; then
     echo '# Running ReferenceSeeker...'
     REFSEEK="$REFSEEK" \
-	   ./scripts/run-referenceseeker ${UNICYCLER}/assembly.fasta
+	   ./scripts/run-referenceseeker ${POLISHED}/polished.fasta
 fi
     
 # ------------------------------------------------------------------------
