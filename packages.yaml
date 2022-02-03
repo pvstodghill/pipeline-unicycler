@@ -1,7 +1,7 @@
 # https://github.com/BenLangmead/bowtie2
 ---
 image: pvstodghill/bowtie2
-version: 2.4.4__2021-09-01
+version: 2.4.5__2022-01-31
 commands:
   - bowtie2
   - bowtie2-align-l
@@ -16,7 +16,7 @@ commands:
 # ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/versions/
 ---
 image: pvstodghill/edirect
-version: 15.7.20210909__2021-09-10
+version: 16.5.20220114__2022-01-31
 commands:
   - accn-at-a-time
   - align-columns
@@ -33,6 +33,7 @@ commands:
   - download-pubmed
   - download-sequence
   - ecommon.sh
+  - edirect.py
   - efetch
   - efilter
   - einfo
@@ -48,9 +49,12 @@ commands:
   - filter-stop-words
   - find-in-gene
   - fuse-ranges
+  - fuse-segments
   - gbf2xml
+  - gene2range
   - hgvs2spdi
   - idx-authors
+  - idx-metadata
   - idx-words
   - index-extras
   - index-pubmed
@@ -67,22 +71,22 @@ commands:
   - pm-promote
   - pm-refresh
   - pm-stash
+  - pma2pme
   - print-columns
   - rchive
   - rchive.Linux
   - reorder-columns
   - run-ncbi-converter
-  - setup.sh
   - skip-if-file-exists
   - snp2hgvs
   - snp2tbl
   - sort-table
   - sort-uniq-count
   - sort-uniq-count-rank
-  - spdi2prod
   - spdi2tbl
   - split-at-intron
   - stream-pubmed
+  - tbl2prod
   - tbl2xml
   - test-edirect
   - test-eutils
@@ -90,6 +94,7 @@ commands:
   - theme-aliases
   - transmute
   - transmute.Linux
+  - uniq-table
   - word-at-a-time
   - xml2fsa
   - xml2json
@@ -368,7 +373,7 @@ commands:
 # https://github.com/OpenGene/fastp
 ---
 image: pvstodghill/fastp
-version: 0.22.0__2021-08-31
+version: 0.23.0__2021-10-15
 commands:
   - fastp
   
@@ -403,9 +408,10 @@ commands:
   - show-snps
   - show-tiling
 
+# https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 ---
 image: pvstodghill/ncbi-blast
-version: 2.10.0plus__2020-01-15
+version: 2.12.0plus__2021-12-06
 commands:
   - blast_formatter
   - blastdb_aliastool
@@ -453,7 +459,7 @@ commands:
 # https://github.com/oschwengers/referenceseeker
 ---
 image: pvstodghill/referenceseeker
-version: 1.7.3__2021-06-07
+version: 1.8.0__2022-01-31
 commands:
   - referenceseeker
   - referenceseeker_db
@@ -495,12 +501,9 @@ commands:
   - zoom2sam.pl
 
 # https://github.com/rrwick/Unicycler
+# https://anaconda.org/bioconda/unicycler
 ---
 image: pvstodghill/unicycler
-version: 0.4.9__2021-05-03
+version: 0.5.0__2022-01-31
 commands:
   - unicycler
-  - unicycler_align
-  - unicycler_polish
-  - unicycler_scrub
-# - unicycler_check # (deprecated)
