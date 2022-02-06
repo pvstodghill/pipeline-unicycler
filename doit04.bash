@@ -6,27 +6,27 @@
 # https://github.com/Nextomics/NextPolish
 # ------------------------------------------------------------------------
 
-rm -rf ${POLISH}
-mkdir ${POLISH}
+rm -rf ${POLISHED}
+mkdir ${POLISHED}
 
 
 if [ -z "${R1_FQ_GZ}" ] ; then
 
     echo 1>&2 '# No Illumina reads to for polishing'
 
-    cp ${UNICYCLER}/polished.fasta ${POLISH}/polished.fasta
+    cp ${UNICYCLER}/assembly.fasta ${POLISHED}/polished.fasta
 
 else
 
     echo 1>&2 '# Polishing with short-reads (Nextpolish)'
 
-    cp ${UNICYCLER}/polished.fasta ${POLISH}/unpolished.fasta
-    cp ${FASTP}/trimmed_R1.fastq.gz ${POLISH}/trimmed_R1.fastq.gz
+    cp ${UNICYCLER}/assembly.fasta ${POLISHED}/unpolished.fasta
+    cp ${FASTP}/trimmed_R1.fastq.gz ${POLISHED}/trimmed_R1.fastq.gz
     if [ "${R2_FQ_GZ}" ] ; then
-	cp ${FASTP}/trimmed_R2.fastq.gz ${POLISH}/trimmed_R2.fastq.gz
+	cp ${FASTP}/trimmed_R2.fastq.gz ${POLISHED}/trimmed_R2.fastq.gz
     fi
     (
-	cd ${POLISH}
+	cd ${POLISHED}
 
 	cat <<EOF > sgs.fofn
 trimmed_R1.fastq.gz
