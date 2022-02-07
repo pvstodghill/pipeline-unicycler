@@ -4,6 +4,8 @@
 # Print final git info
 # ------------------------------------------------------------------------
 
+cd $(dirname ${BASH_SOURCE[0]})
+
 echo ''
 (
     set -x
@@ -15,5 +17,5 @@ echo ''
     git log -n1
 )
 
-#! /bin/bash
+
 

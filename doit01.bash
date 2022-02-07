@@ -1,6 +1,6 @@
 #! /bin/bash
 
-. doit-preamble.bash
+. $(dirname ${BASH_SOURCE[0]})/doit-preamble.bash
 
 # ------------------------------------------------------------------------
 # Run filtlong
@@ -15,7 +15,7 @@ if [ -z "${NANOPORE_FQ_GZ}" ] ; then
 else
     mkdir -p ${FILTLONG}
     echo 1>&2 '# Running filtlong...'
-    ${HOWTO} filtlong --min_length 1000 --keep_percent 95 \
+    filtlong --min_length 1000 --keep_percent 95 \
 	     ${INPUTS}/raw_nanopore.fastq.gz \
 	| gzip > ${FILTLONG}/filtered_nanopore.fastq.gz
 

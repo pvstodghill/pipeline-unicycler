@@ -1,6 +1,6 @@
 #! /bin/bash
 
-. doit-preamble.bash
+. $(dirname ${BASH_SOURCE[0]})/doit-preamble.bash
 
 if [ -z "${GENUS}" -o "${GENUS}" = FIXME ] ; then
     echo 1>&2 config.bash: GENUS is not set.
@@ -31,7 +31,7 @@ if [ "$PGAP_HOME" ] ; then
 	exit 1
     fi
 
-    ./scripts/run-pgap \
+    ${PIPELINE}/scripts/run-pgap \
 	-u -f \
 	-S $STRAIN -V "${VERSION}" \
 	-t ${TAXON_ID} \
@@ -41,9 +41,9 @@ if [ "$PGAP_HOME" ] ; then
 
     echo 1>&2 '# Finishing up...'
 
-    cp ${PGAP_OUT}/annot.faa data/final.faa
-    cp ${PGAP_OUT}/annot.fna data/final.fna
-    cp ${PGAP_OUT}/annot.gbk data/final.gbk
+    cp ${PGAP_OUT}/annot.faa ${DATA}/final.faa
+    cp ${PGAP_OUT}/annot.fna ${DATA}/final.fna
+    cp ${PGAP_OUT}/annot.gbk ${DATA}/final.gbk
 
 else
     
@@ -64,13 +64,13 @@ else
 
     echo 1>&2 '# Finishing up...'
 
-    cp ${PROKKA}/output.faa data/final.faa
-    cp ${PROKKA}/output.fna data/final.fna
-    cp ${PROKKA}/output.gbk data/final.gbk
+    cp ${PROKKA}/output.faa ${DATA}/final.faa
+    cp ${PROKKA}/output.fna ${DATA}/final.fna
+    cp ${PROKKA}/output.gbk ${DATA}/final.gbk
 
     cat ${PROKKA}/output.gff \
 	| sed -e '/^##FASTA/,$d' \
-	> data/final.gff
+	> ${DATA}/final.gff
 fi
 
 # ------------------------------------------------------------------------

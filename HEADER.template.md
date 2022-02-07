@@ -25,7 +25,7 @@ FIXME: put ReferenceSeeker results (doit04.out) here.
 PGAP "taxcheck" results:
 
 ~~~
-FIXME: PGAP ANI results (data/06_pgap/ani-tax-report.txt) here.
+FIXME: PGAP ANI results (${DATA}/06_pgap/ani-tax-report.txt) here.
 ~~~
 
 # Method

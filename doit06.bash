@@ -1,6 +1,6 @@
 #! /bin/bash
 
-. doit-preamble.bash
+. $(dirname ${BASH_SOURCE[0]})/doit-preamble.bash
 
 # ------------------------------------------------------------------------
 # "Normalize" the genome.
@@ -12,8 +12,8 @@ rm -rf ${NORMALIZED}
 mkdir -p ${NORMALIZED}
 
 cat ${POLISHED}/polished.fasta \
-    | ./scripts/rename-contigs -d ${STRAIN}${VERSION}_ \
-    | ./scripts/dephix \
+    | ${PIPELINE}/scripts/rename-contigs -d ${STRAIN}${VERSION}_ \
+    | ${PIPELINE}/scripts/dephix \
 	  > ${NORMALIZED}/normalized.fasta
 
 if [ "$PGAP_HOME" ] ; then
@@ -22,7 +22,7 @@ if [ "$PGAP_HOME" ] ; then
 
 
     cat ${NORMALIZED}/normalized.fasta \
-	| ./scripts/sanitize-for-pgap \
+	| ${PIPELINE}/scripts/sanitize-for-pgap \
 	      > ${NORMALIZED}/sanitized.fasta
 
 fi

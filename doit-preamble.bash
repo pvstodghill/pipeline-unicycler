@@ -1,15 +1,19 @@
 #! /bin/bash
 
-HOWTO="./scripts/howto -q -T data/tmp -f packages.yaml"
 THREADS=$(nproc --all)
 
 export LC_ALL=C
+
+PIPELINE=$(dirname ${BASH_SOURCE[0]})
+DATA=data
 
 # ------------------------------------------------------------------------
 
 . config.bash
 
 # ------------------------------------------------------------------------
+
+export HOWTO_TMPDIR=$(realpath ${DATA})/tmp
 
 if [ "$PACKAGES_FROM" = conda ] ; then
     if [ -z "$CONDA_EXE" ] ; then
@@ -75,11 +79,11 @@ set -o pipefail
 
 # ------------------------------------------------------------------------
 
-INPUTS=data/00_inputs
-FILTLONG=data/01_filtlong
-FASTP=data/02_fastp
-UNICYCLER=data/03_unicycler
-POLISHED=data/04_polish
-NORMALIZED=data/06_normalized
-PGAP_OUT=data/07_pgap
-PROKKA=data/08_prokka
+INPUTS=${DATA}/00_inputs
+FILTLONG=${DATA}/01_filtlong
+FASTP=${DATA}/02_fastp
+UNICYCLER=${DATA}/03_unicycler
+POLISHED=${DATA}/04_polish
+NORMALIZED=${DATA}/06_normalized
+PGAP_OUT=${DATA}/07_pgap
+PROKKA=${DATA}/08_prokka
