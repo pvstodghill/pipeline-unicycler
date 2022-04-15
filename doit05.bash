@@ -7,9 +7,14 @@
 # ------------------------------------------------------------------------
 
 if [ "$REFSEEK" ] ; then
+
+    rm -rf ${REFERENCESEEKER}
+    mkdir ${REFERENCESEEKER}
+
     echo '# Running ReferenceSeeker...'
     REFSEEK="$REFSEEK" \
-	   ${PIPELINE}/scripts/run-referenceseeker ${POLISHED}/polished.fasta
+	   ${PIPELINE}/scripts/run-referenceseeker ${POLISHED}/polished.fasta \
+	   2>&1 | tee ${REFERENCESEEKER}/log.log
 fi
     
 # ------------------------------------------------------------------------

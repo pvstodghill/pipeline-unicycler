@@ -84,6 +84,7 @@ FILTLONG=${DATA}/01_filtlong
 FASTP=${DATA}/02_fastp
 UNICYCLER=${DATA}/03_unicycler
 POLISHED=${DATA}/04_polish
+REFERENCESEEKER=${DATA}/05_referenceseeker
 NORMALIZED=${DATA}/06_normalized
 PGAP_OUT=${DATA}/07_pgap
 PROKKA=${DATA}/08_prokka
