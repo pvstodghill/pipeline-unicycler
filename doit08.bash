@@ -6,6 +6,9 @@
 # Compute stats
 # ------------------------------------------------------------------------
 
+rm -rf ${STATS}
+mkdir -p ${STATS}
+
 if [ -z "$R1_FQ_GZ" ] ; then
 
     echo 1>&2 '# fixme: Compute stats for long reads only'
@@ -22,7 +25,8 @@ elif [ -z "$NANOPORE_FQ_GZ" ] ; then
 	${FASTP}/trimmed_R1.fastq.gz \
 	${FASTP}/trimmed_R2.fastq.gz \
 	${DATA}/final.fna \
-	${DATA}/final.gff
+	${DATA}/final.gff \
+    | tee ${STATS}/stats.tsv
 
 else
     
@@ -38,7 +42,8 @@ else
 	${FASTP}/trimmed_R1.fastq.gz \
 	${FASTP}/trimmed_R2.fastq.gz \
 	${DATA}/final.fna \
-	${DATA}/final.gff
+	${DATA}/final.gff \
+    | tee ${STATS}/stats.tsv
 
 fi
 

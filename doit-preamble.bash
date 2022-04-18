@@ -88,3 +88,4 @@ REFERENCESEEKER=${DATA}/05_referenceseeker
 NORMALIZED=${DATA}/06_normalized
 PGAP_OUT=${DATA}/07_pgap
 PROKKA=${DATA}/08_prokka
+STATS=${DATA}/09_statistics
