@@ -2,6 +2,8 @@
 
 . $(dirname ${BASH_SOURCE[0]})/doit-preamble.bash
 
+. config07.bash
+
 if [ -z "${GENUS}" -o "${GENUS}" = FIXME ] ; then
     echo 1>&2 config.bash: GENUS is not set.
     exit 1
@@ -17,8 +19,6 @@ fi
 # ------------------------------------------------------------------------
 
 if [ "$PGAP_HOME" ] ; then
-
-    . config07.bash
 
     echo 1>&2 '# Running PGAP...'
 
