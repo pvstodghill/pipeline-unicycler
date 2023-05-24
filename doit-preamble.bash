@@ -101,4 +101,5 @@ REFERENCESEEKER=${DATA}/05_referenceseeker
 NORMALIZED=${DATA}/06_normalized
 PGAP_OUT=${DATA}/07_pgap
 PROKKA=${DATA}/07_prokka
-STATS=${DATA}/08_stats
+BUSCO_OUT=${DATA}/08_busco
+STATS=${DATA}/09_stats
