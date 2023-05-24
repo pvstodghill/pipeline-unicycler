@@ -26,7 +26,7 @@ elif [ -z "$NANOPORE_FQ_GZ" ] ; then
 	${FASTP}/trimmed_R2.fastq.gz \
 	${DATA}/final.fna \
 	${DATA}/final.gff \
-    | tee ${STATS}/stats.tsv
+	| tee ${STATS}/stats.tsv
 
 else
     
@@ -43,7 +43,7 @@ else
 	${FASTP}/trimmed_R2.fastq.gz \
 	${DATA}/final.fna \
 	${DATA}/final.gff \
-    | tee ${STATS}/stats.tsv
+	| tee ${STATS}/stats.tsv
 
 fi
 
