@@ -23,9 +23,6 @@ FASTP_ADAPTER_ARGS= # Use auto-detection method
 MODE=normal
 #MODE=bold
 
-# if ${PGAP_HOME} is not set, run Prokka instead
-#PGAP_HOME=$HOME/scratch/pgap
-
 #REFSEEK=$HOME/scratch/referenceseeker
 
 # ------------------------------------------------------------------------
