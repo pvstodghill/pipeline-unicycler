@@ -1,7 +1,39 @@
+# https://bioconda.github.io/recipes/blast/README.html
+# https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+---
+image: pvstodghill/blast
+version: 2.14.0__2023-05-08
+commands:
+  - blast_formatter
+  - blastdb_aliastool
+  - blastdbcheck
+  - blastdbcmd
+  - blastn
+  - blastp
+  - blastx
+  - cleanup-blastdb-volumes.py
+  - convert2blastmask
+  - deltablast
+  - dustmasker
+  - get_species_taxids.sh
+  - legacy_blast.pl
+  - makeblastdb
+  - makembindex
+  - makeprofiledb
+  - psiblast
+  - rpsblast
+  - rpstblastn
+  - segmasker
+  - tblastn
+  - tblastx
+  - update_blastdb.pl
+  - windowmasker
+
 # https://github.com/BenLangmead/bowtie2
+# https://bioconda.github.io/recipes/bowtie2/README.html
 ---
 image: pvstodghill/bowtie2
-version: 2.4.5__2022-01-31
+version: 2.5.1__2023-05-08
 commands:
   - bowtie2
   - bowtie2-align-l
@@ -13,27 +45,12 @@ commands:
   - bowtie2-inspect-l
   - bowtie2-inspect-s
 
-# ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/versions/
+# https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/versions/
+# https://bioconda.github.io/recipes/entrez-direct/README.html
 ---
-image: pvstodghill/edirect
-version: 16.5.20220114__2022-01-31
+image: pvstodghill/entrez-direct
+version: 16.2__2023-05-09
 commands:
-  - accn-at-a-time
-  - align-columns
-  - amino-acid-composition
-  - archive-pubmed
-  - asn2xml
-  - between-two-genes
-  - blst2tkns
-  - csv2xml
-  - custom-index
-  - disambiguate-nucleotides
-  - download-ncbi-data
-  - download-ncbi-software
-  - download-pubmed
-  - download-sequence
-  - ecommon.sh
-  - edirect.py
   - efetch
   - efilter
   - einfo
@@ -42,67 +59,9 @@ commands:
   - esample
   - esearch
   - esummary
-  - exclude-uid-lists
-  - expand-current
-  - fetch-pubmed
-  - filter-columns
-  - filter-stop-words
-  - find-in-gene
-  - fuse-ranges
-  - fuse-segments
-  - gbf2xml
-  - gene2range
-  - hgvs2spdi
-  - idx-authors
-  - idx-metadata
-  - idx-words
-  - index-extras
-  - index-pubmed
-  - intersect-uid-lists
-  - join-into-groups-of
-  - json2xml
-  - nquire
-  - phrase-search
-  - pm-collect
-  - pm-index
-  - pm-invert
-  - pm-merge
-  - pm-prepare
-  - pm-promote
-  - pm-refresh
-  - pm-stash
-  - pma2pme
-  - print-columns
-  - rchive
-  - rchive.Linux
-  - reorder-columns
-  - run-ncbi-converter
-  - skip-if-file-exists
-  - snp2hgvs
-  - snp2tbl
-  - sort-table
-  - sort-uniq-count
-  - sort-uniq-count-rank
-  - spdi2tbl
-  - split-at-intron
-  - stream-pubmed
-  - tbl2prod
-  - tbl2xml
-  - test-edirect
-  - test-eutils
-  - test-pubmed-index
-  - theme-aliases
-  - transmute
-  - transmute.Linux
-  - uniq-table
-  - word-at-a-time
-  - xml2fsa
-  - xml2json
-  - xml2tbl
-  - xtract
-  - xtract.Linux
-  - xy-plot
 
+# https://bioconda.github.io/recipes/emboss/README.html
+# https://tracker.debian.org/pkg/emboss
 # http://emboss.sourceforge.net
 ---
 image: pvstodghill/emboss
@@ -371,12 +330,13 @@ commands:
   - yank
 
 # https://github.com/OpenGene/fastp
+# https://bioconda.github.io/recipes/fastp/README.html
 ---
 image: pvstodghill/fastp
-version: 0.23.2__2021-12-06
+version: 0.23.3__2023-05-24
 commands:
   - fastp
-  
+
 # https://github.com/rrwick/Filtlong
 ---
 image: pvstodghill/filtlong
@@ -409,40 +369,10 @@ commands:
   - show-snps
   - show-tiling
 
-# https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
----
-image: pvstodghill/ncbi-blast
-version: 2.12.0plus__2021-12-06
-commands:
-  - blast_formatter
-  - blastdb_aliastool
-  - blastdbcheck
-  - blastdbcmd
-  - blastn
-  - blastp
-  - blastx
-  - cleanup-blastdb-volumes.py
-  - convert2blastmask
-  - deltablast
-  - dustmasker
-  - get_species_taxids.sh
-  - legacy_blast.pl
-  - makeblastdb
-  - makembindex
-  - makeprofiledb
-  - psiblast
-  - rpsblast
-  - rpstblastn
-  - segmasker
-  - tblastn
-  - tblastx
-  - update_blastdb.pl
-  - windowmasker
-
 # https://github.com/Nextomics/NextPolish
 ---
 image: pvstodghill/nextpolish
-version: 1.4.0__2021-11-17
+version: 1.4.1__2022-07-29
 commands:
   - nextPolish
 
@@ -474,9 +404,10 @@ commands:
   - referenceseeker_db
 
 # https://github.com/samtools/samtools
+# https://bioconda.github.io/recipes/samtools/README.html
 ---
 image: pvstodghill/samtools
-version: 1.14__2021-10-29
+version: 1.17__2023-05-09
 commands:
   - ace2sam
   - bcftools
