@@ -14,19 +14,23 @@ FIXME
 
 Assemble statistics:
 
-FIXME: put doit07.out stats here.
+FIXME: put `doit09-stats.out` stats here.
 
 ReferenceSeeker results:
 
 ~~~
-FIXME: put ReferenceSeeker results (doit04.out) here.
+FIXME: put ReferenceSeeker results (doit05-refseek.out) here.
 ~~~
 
 PGAP "taxcheck" results:
 
 ~~~
-FIXME: PGAP ANI results (${DATA}/06_pgap/ani-tax-report.txt) here.
+FIXME: PGAP ANI results (${DATA}/07_pgap/ani-tax-report.txt) here.
 ~~~
+
+BUSCO statistics:
+
+FIXME: put `data/08_busco/__report__.txt` here.
 
 # Method
 
